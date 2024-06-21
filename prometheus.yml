@@ -2,11 +2,6 @@ global:
   scrape_interval: 15s  # Интервал сбора метрик
 
 scrape_configs:
-  - job_name: 'matras-api'
-    static_configs:
-      - targets: ['host.docker.internal:7070']  # Для Windows и macOS
-      # - targets: ['host.docker.internal:7070']  # Для Linux можно использовать IP-адрес хоста
-
   - job_name: 'crm-users'
     static_configs:
       - targets: ['host.docker.internal:4002']  # Для Windows и macOS
